@@ -1,0 +1,52 @@
+
+El codigo eigenvals.c recibe desde la linea de comandos el nombre de
+un archivo que tiene las entradas de una matriz SIMETRICA.
+
+El programa tiene una funcion que calcula unicamente los eigenvalores
+de la matriz, y otra funcion que calcula tanto los eigenvalores como
+los eigenvectores. En este caso, tambien encuentra el valor minimo y maximo
+de las entradas de la matriz A*V - V*D, donde V es la matriz de 
+eigenvectores y D es la matriz diagonal con los eigenvalores. Si todo esta
+calculado de forma correcta, esos  valores maximo y minimo deben ser
+cercanos a cero.
+
+Ejemplo:
+
+> ./eigenvals mA13.bin 
+
+------ Calculamos unicamente los eigenvalores ----------
+Dimensiones de la matriz: 6 x 6
+Matriz del sistema: 
+  1.1018    -0.9045    -0.0126     1.8689     2.0281    -0.7569   
+ -0.9045    -0.1258     1.0442     2.3000    -1.0509    -1.1729   
+ -0.0126     1.0442     1.8752     2.0572     0.5521     0.3865   
+  1.8689     2.3000     2.0572     4.9027     0.9114     2.1620   
+  2.0281    -1.0509     0.5521     0.9114     4.3272     0.2789   
+ -0.7569    -1.1729     0.3865     2.1620     0.2789    -0.8114   
+
+Eigenvalores:   7.8910    -3.6291     5.1667    -0.1808     1.3330     0.6887   
+
+
+------ Calculamos eigenvalores y eigenvectores ------
+Dimensiones de la matriz: 6 x 6
+Matriz del sistema: 
+  1.1018    -0.9045    -0.0126     1.8689     2.0281    -0.7569   
+ -0.9045    -0.1258     1.0442     2.3000    -1.0509    -1.1729   
+ -0.0126     1.0442     1.8752     2.0572     0.5521     0.3865   
+  1.8689     2.3000     2.0572     4.9027     0.9114     2.1620   
+  2.0281    -1.0509     0.5521     0.9114     4.3272     0.2789   
+ -0.7569    -1.1729     0.3865     2.1620     0.2789    -0.8114   
+
+Eigenvalores:   7.8910    -3.6291     5.1667    -0.1808     1.3330     0.6887   
+
+Eigenvectores: 
+ -0.2862     0.3608    -0.3333     0.5051    -0.4124    -0.5016   
+ -0.1593     0.5642     0.3769    -0.5582     0.1374    -0.4287   
+ -0.3387    -0.0051     0.2004     0.4868     0.7746    -0.0903   
+ -0.7765    -0.3905     0.3233    -0.1192    -0.3385     0.1055   
+ -0.3805     0.0055    -0.7735    -0.4018     0.2964     0.0868   
+ -0.1738     0.6316     0.0621     0.1438    -0.0928     0.7333   
+Rango de las entradas de matriz AV-VD: [-1.443290e-15, 1.998401e-15]
+
+
+
